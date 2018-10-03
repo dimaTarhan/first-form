@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good Travel Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="travelLogo">
+            <img src="good_travel_logo.jpg" height="250"/>
+        </div>
+
+        <div>
+        <header>
+            <h1>Travel with us</h1>
+        </header>
+            <div class="formContainer">
+                <form name="travelForm" action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+                    <fieldset>
+                        <legend>Personal information</legend>
+                        <label>
+                            First Name:<br>
+                            <input type="text" name="name" class="borderColor" minlength="3" autocomplete="on" autofocus required>
+                        </label><br>
+
+                        <label>
+                            Last Name:<br>
+                            <input type="text" name="surname" class="borderColor" autocomplete="on" required>
+                        </label><br>
+
+                        <label>
+                            Birthdate:<br>
+                            <input type="date" name="birthdate" class="borderColor">
+                        </label><br>
+
+                            Do you have children?<br>
+                        <label>
+                            Yes <input type="radio" name="children" value="yes" checked>
+                        </label>
+                        <label>
+                            No <input type="radio" name="children" value="no">
+                        </label><br>
+
+                        <div id="hidden">
+                            <label>
+                                Amount of children: <input type="number" name="amountChild" class="borderColor" min="1" max="10">
+                            </label><br>
+                            <label>
+                                Full years younger: <input type="number" name="childOldMin" class="borderColor" min="0" max="16">
+                            </label>
+                        </div>
+                    </fieldset><br>
+
+                    <fieldset>
+                        <legend>Contact information</legend>
+                        <label>
+                            E-mail:<br>
+                            <input type="email" name="email" class="borderColor" maxlength="25" autocomplete="on" required>
+                        </label><br>
+
+                        <label>
+                            Phone number:<br>
+                            <input type="tel" name="telNumber" class="borderColor" autocomplete="on">
+                        </label><br>
+
+                        <label>
+                            Registration code:<br>
+                            <input type="password" name="regCode" class="borderColor" autocomplete="off" required>
+                        </label><br>
+                    </fieldset><br>
+
+                    <fieldset>
+                        <legend>Information about the trip</legend>
+                        Country:
+                        <select name="country" class="borderColor">
+                            <option value="England">England</option>
+                            <option value="Germany">Germany</option>
+                            <option value="USA" disabled>USA</option>
+                            <option value="France">France</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Japan">Japan</option>
+                            <option value="China">China</option>
+                        </select><br>
+
+                        Hotel comfort:
+                        <label>
+                            <input type="checkbox" name="hotelComfort" value="miniBar">Mini-bar
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hotelComfort" value="tv">TV
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hotelComfort" value="safe">Safe
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hotelComfort" value="fridge">Fridge
+                        </label><br>
+
+                        <label>
+                            Date of Travel:
+                            <input type="date" name="travelDate" class="borderColor">
+                        </label><br>
+
+                        <label>
+                            Departure time (before):
+                            <input type="time" name="departureTimeBefore" class="borderColor">
+                        </label><br>
+
+
+                            Do you want to rent car?
+                        <label>
+                            <input type="radio" name="carRent" value="yes">Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="carRent" value="no">No
+                        </label><br>
+
+                        Car color:
+                        <input type="color" name="carColor">
+                    </fieldset>
+
+                    <h2>Please, rate the service</h2>
+                    <div class="rangeContainer">
+                        Like <input type="range" name="rateService"> Not like
+                        <br><br>
+                    </div>
+
+                    <div class="buttonContainer">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
