@@ -1,5 +1,5 @@
 # First Form
-This is the Good Travel form-page - my first form in web.
+This is the page "Good Travel form" - my first form in web.
 ## Technologies
 + HTML
 + CSS
